@@ -6,6 +6,10 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    ui->spinBox->setRange(1,10);
+    ui->spinBox_2->setRange(1,10);
+    ui->spinBox_3->setRange(1,10);
+    ui->spinBox_4->setRange(1,10);
 }
 
 MainWindow::~MainWindow()
@@ -22,10 +26,6 @@ void MainWindow::on_spinBox_valueChanged(int arg1)
 
 void MainWindow::on_pushButton_clicked()
 {
-    ui->spinBox->setRange(1,10);
-    ui->spinBox_2->setRange(1,10);
-    ui->spinBox_3->setRange(1,10);
-    ui->spinBox_4->setRange(1,10);
     int L1 = ui->spinBox->value();
     int L2 = ui->spinBox_2->value();
     int L3 = ui->spinBox_3->value();
